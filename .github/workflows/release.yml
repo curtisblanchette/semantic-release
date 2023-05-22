@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Cutting a Release'
-        run: npm run release
+        run: npx semantic-release
