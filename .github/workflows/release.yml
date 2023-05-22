@@ -30,4 +30,9 @@ jobs:
       - name: 'Cutting a Release'
         run: npx semantic-release
       - name: 'Update Main'
-        run: git checkout main && git merge uat
+        run: |
+          git config --global user.email "hello@curtisblanchette.com"
+          git config --global user.name "curtisblanchette" |
+          git checkout main |
+          git merge uat |
+          git push
