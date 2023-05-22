@@ -8,9 +8,6 @@ on:
 permissions:
   contents: read
 
-env:
-  GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
-
 jobs:
   release:
     name: Release
@@ -29,5 +26,12 @@ jobs:
         run: npm i
       - name: 'Cutting a Release'
         run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
       - name: 'Update Main'
-        run: git checkout main && git merge uat
+        run: |
+          git config --global user.email "hello@curtisblanchette.com"
+          git config --global user.name "curtisblanchette" |
+          git checkout main |
+          git merge uat
+          git push
