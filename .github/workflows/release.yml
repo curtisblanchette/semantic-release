@@ -3,15 +3,22 @@ name: Release
 on:
   push:
     branches:
-      uat
+      - uat
 
-env:
-  GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+permissions:
+  contents: read
 
 jobs:
-  Release:
+  release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
     steps:
       - name: 'Cutting a Release'
         run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
