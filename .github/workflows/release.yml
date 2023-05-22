@@ -1,0 +1,14 @@
+name: Release
+
+on:
+  push:
+    branches:
+      uat
+
+jobs:
+  Release:
+    name: Release
+    runs-ons: ubuntu-latest
+    steps:
+      - name: 'Cutting a Release'
+        run: npm run release
