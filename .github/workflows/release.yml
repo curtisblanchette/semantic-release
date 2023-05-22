@@ -8,6 +8,9 @@ on:
 permissions:
   contents: read
 
+env:
+  GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+
 jobs:
   release:
     name: Release
@@ -30,8 +33,6 @@ jobs:
           git add . |
           git commit -m 'chore: release to uat' |
           git push
-        env:
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
       - name: 'Update Main'
         run: |
           git config --global user.email "hello@curtisblanchette.com"
