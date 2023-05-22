@@ -3,10 +3,8 @@
   "scripts": {
     "release": "semantic-release"
   },
-  "dependencies": {
-    "semantic-release": "^21.0.2"
-  },
   "devDependencies": {
+    "semantic-release": "^21.0.2",
     "@semantic-release/changelog": "^6.0.3"
   }
 }
