@@ -13,6 +13,7 @@
                   "commitsSort": ["subject", "scope"]
                 }
             }
-        ]
+        ],
+        "@semantic-release/changelog"
     ]
 }
