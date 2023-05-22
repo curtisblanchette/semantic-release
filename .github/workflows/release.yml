@@ -25,7 +25,11 @@ jobs:
       - name: Install
         run: npm i
       - name: 'Cutting a Release'
-        run: npx semantic-release
+        run: |
+          npx semantic-release |
+          git add . |
+          git commit -m 'chore: release to uat' |
+          git push
         env:
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
       - name: 'Update Main'
