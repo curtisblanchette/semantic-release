@@ -1,3 +1,5 @@
+name: Trigger Release 
+
 on:
   workflow_dispatch:
     inputs:
