@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/curtisblanchette/semantic-release/compare/v1.1.0...v1.2.0) (2023-05-24)
+
+
+### Bug Fixes
+
+* remove redundant new line ([bf164a3](https://github.com/curtisblanchette/semantic-release/commit/bf164a3677be331b2e9bb98b0c532e2f1893efba))
+
+
+### Features
+
+* add this is the end ([09e363c](https://github.com/curtisblanchette/semantic-release/commit/09e363c18d5741b1fabb102ff185dc928163552e))
+
 # [1.1.0](https://github.com/curtisblanchette/semantic-release/compare/v1.0.0...v1.1.0) (2023-05-24)
 
 
