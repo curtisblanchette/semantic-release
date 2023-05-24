@@ -11,6 +11,10 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
+      - name: Configure Committer
+        run: | 
+          git config --global user.email "hello@curtisblanchette.com" |
+          git config --global user.name "curtisblanchette"
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -25,8 +29,6 @@ jobs:
           git push
       - name: 'Update Main'
         run: |
-          git config --global user.email "hello@curtisblanchette.com"
-          git config --global user.name "curtisblanchette" |
           git checkout main |
           git merge uat |
           git push
