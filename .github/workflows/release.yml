@@ -1,19 +1,9 @@
-name: Release
+name: Trigger Release
 
-on:
-  push:
-    branches:
-      - uat
-
-permissions:
-  contents: read
-
-env:
-  GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+on: workflow_dispatch
 
 jobs:
   release:
-    name: Release
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -40,3 +30,4 @@ jobs:
           git checkout main |
           git merge uat |
           git push
+
