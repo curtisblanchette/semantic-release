@@ -1,6 +1,11 @@
 name: Trigger Release
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      isDryRun:
+        type: boolean
+        description: Test the output of cutting a release without actually doing it.
 
 env:
   GH_TOKEN: ${{secrets.GH_TOKEN}}
@@ -24,5 +29,11 @@ jobs:
           node-version: "18.12.1"
       - name: Install
         run: npm clean-install
-      - name: 'Cutting a Release'
+
+      - name: 'Releasing (Dry Run)'
+        if: ${{ github.event.inputs.isDryRun }}
+        run: npx semantic-release --dry-run
+
+      - name: 'Releasing'
+        if: ${{ !github.event.inputs.isDryRun }}
         run: npx semantic-release
