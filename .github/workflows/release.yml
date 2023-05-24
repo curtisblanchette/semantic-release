@@ -33,7 +33,8 @@ jobs:
       - name: 'Releasing'
 
         run: |
-          if [ "${{github.event.inputs.isDryRun}}" ] then;
+          if [ "${{github.event.inputs.isDryRun}}" ] 
+          then
             echo "=============================\n"
             echo "Releasing in DRY RUN mode\n"
             echo "=============================\n\n"
