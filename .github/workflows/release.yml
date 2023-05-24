@@ -35,9 +35,9 @@ jobs:
         run: |
           if [ "${{github.event.inputs.isDryRun}}" ] 
           then
-            echo "=============================\n"
-            echo "Releasing in DRY RUN mode\n"
-            echo "=============================\n\n"
+            echo "================================="
+            echo "    Releasing in DRY RUN mode    "
+            echo "================================="
             npx semantic-release --dry-run
           else
             npx semantic-release
