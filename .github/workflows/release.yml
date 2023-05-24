@@ -30,10 +30,15 @@ jobs:
       - name: Install
         run: npm clean-install
 
-      - name: 'Releasing (Dry Run)'
-        if: ${{ github.event.inputs.isDryRun }}
-        run: npx semantic-release --dry-run
-
       - name: 'Releasing'
-        if: ${{ !github.event.inputs.isDryRun }}
-        run: npx semantic-release
+
+        run: |
+          if [ "${{github.event.inputs.isDryRun}}" ] then;
+            echo "=============================\n"
+            echo "Releasing in DRY RUN mode\n"
+            echo "=============================\n\n"
+            npx semantic-release --dry-run
+          else
+            npx semantic-release
+          fi
+        shell: bash
