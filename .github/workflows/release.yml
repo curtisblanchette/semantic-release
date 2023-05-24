@@ -5,16 +5,16 @@ on: workflow_dispatch
 jobs:
   release:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      issues: write
-      pull-requests: write
-      id-token: write
+#    permissions:
+#      contents: write
+#      issues: write
+#      pull-requests: write
+#      id-token: write
     steps:
-      - name: Configure Committer
-        run: | 
-          git config --global user.email "hello@curtisblanchette.com" |
-          git config --global user.name "curtisblanchette"
+#      - name: Configure Committer
+#        run: |
+#          git config --global user.email "hello@curtisblanchette.com" |
+#          git config --global user.name "curtisblanchette"
       - name: Checkout
         uses: actions/checkout@v3
         with:
