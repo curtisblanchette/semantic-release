@@ -1,7 +1,7 @@
 name: Trigger Release
 
 on:
-  workflow_dispatch:
+  repository_dispatch:
     types: [semantic-release]
 
 jobs:
