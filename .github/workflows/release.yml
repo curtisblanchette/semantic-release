@@ -11,8 +11,9 @@ jobs:
 #      pull-requests: write
 #      id-token: write
     steps:
-#      - name: Configure Committer
-#        run: |
+      - name: Configure Committer
+        run: |
+          git config --list
 #          git config --global user.email "hello@curtisblanchette.com" |
 #          git config --global user.name "curtisblanchette"
       - name: Checkout
