@@ -5,7 +5,7 @@ on:
     inputs:
       isDryRun:
         type: boolean
-        description: Test the output of cutting a release without actually doing it.
+        description: Dry Run
 
 env:
   GH_TOKEN: ${{secrets.GH_TOKEN}}
