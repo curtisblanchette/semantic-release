@@ -1,5 +1,5 @@
 name: Release
-
+run-name: Release ${{inputs.isDryRun == 'true' && 'Dry Run'}}
 on:
   workflow_dispatch:
     inputs:
