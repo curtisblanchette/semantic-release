@@ -43,4 +43,4 @@ jobs:
           fi
         shell: bash
 
-run-name: Release ${{github.event.inputs.isDryRun == 'true' && 'Dry Run' || ''}} ${{ steps.ver.outputs.nextVer }}
+run-name: Release ${{github.event.inputs.isDryRun == 'true' && 'Dry Run' || ''}} ${{ github.env.NEXT_VERSION }}
