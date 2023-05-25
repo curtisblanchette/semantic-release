@@ -1,5 +1,4 @@
 name: Release
-run-name: Release ${{github.event.inputs.isDryRun == 'true' && 'Dry Run' || ''}}
 on:
   workflow_dispatch:
     inputs:
@@ -31,6 +30,7 @@ jobs:
         run: npm i -g semantic-release @semantic-release/changelog @semantic-release/git
 
       - name: 'Releasing'
+        id: ver
         run: |
           if [ "${{github.event.inputs.isDryRun}}" = "true" ] 
           then
@@ -42,3 +42,5 @@ jobs:
             npx semantic-release
           fi
         shell: bash
+
+run-name: Release ${{github.event.inputs.isDryRun == 'true' && 'Dry Run' || ''}} ${{ steps.ver.outputs.nextVer }}
