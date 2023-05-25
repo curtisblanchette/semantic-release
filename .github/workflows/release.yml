@@ -1,4 +1,6 @@
 name: Release
+run-name: Release ${{github.event.inputs.isDryRun == 'true' && 'Dry Run' || ''}} ${{ github.event.inputs.NEXT_VERSION }}
+
 on:
   workflow_dispatch:
     inputs:
@@ -42,5 +44,3 @@ jobs:
             npx semantic-release
           fi
         shell: bash
-
-run-name: Release ${{github.event.inputs.isDryRun == 'true' && 'Dry Run' || ''}} ${{ github.env.NEXT_VERSION }}
