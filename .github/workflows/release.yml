@@ -28,10 +28,9 @@ jobs:
         with:
           node-version: "18.12.1"
       - name: Install
-        run: npm clean-install
+        run: npm i -g semantic-release @semantic-release/changelog @semantic-release/git
 
       - name: 'Releasing'
-
         run: |
           if [ "${{github.event.inputs.isDryRun}}" = "true" ] 
           then
