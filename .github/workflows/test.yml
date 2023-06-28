@@ -21,8 +21,7 @@ jobs:
       id-token: write
     steps:
       - id: toLowerCase
-        run: INPUT=${{github.event.inputs.source-tag}} echo "value=${INPUT,,}" >> $GITHUB_OUTPUT
+        run: INPUT=${{github.event.inputs.source-tag}} echo "value=TEST" >> $GITHUB_OUTPUT
       - run: echo "${{steps.toLowerCase.outputs.value}}"
-      - run: echo ${{github.event.inputs.source-tag}}
           
 
