@@ -21,7 +21,7 @@ jobs:
       id-token: write
     steps:
       - id: toLowerCase
-        run: INPUT=${{github.event.inputs.source-tag}} echo "::set-output name=lowerCaseValue::${INPUT,,}"
-      - run: echo ${{steps.toLowerCase.outputs.lowerCaseValue}}
+        run: INPUT=${{github.event.inputs.source-tag}} echo "value=${INPUT,,}" >> $GITHUB_OUTPUT
+      - run: echo ${{steps.toLowerCase.outputs.value}}
           
 
