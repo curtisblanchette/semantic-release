@@ -1,5 +1,4 @@
 name: Test
-run-name: Release ${{github.event.inputs.isDryRun == 'true' && 'Dry Run' || ''}}
 
 on:
   workflow_dispatch:
@@ -21,9 +20,7 @@ jobs:
       id-token: write
     steps:
       - id: toLowerCase
-        run: |
-          INPUT=${{github.event.inputs.source-tag}} 
-          INPUT=${INPUT,,}
-          echo "${INPUT}"
+        run: INPUT=${{github.event.inputs.source-tag}} echo 'value=${INPUT,,}' >> $GITHUB_OUTPUT
+      - run: echo "${{steps.toLowerCase.outputs.value}}"
           
 
