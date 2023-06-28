@@ -24,6 +24,6 @@ jobs:
         run: |
           INPUT=${{github.event.inputs.source-tag}} 
           INPUT=${INPUT,,}
-          echo ${INPUT}
+          echo "${INPUT}"
           
 
