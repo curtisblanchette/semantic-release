@@ -1,4 +1,4 @@
-name: Release
+name: Test
 run-name: Release ${{github.event.inputs.isDryRun == 'true' && 'Dry Run' || ''}}
 
 on:
