@@ -22,6 +22,5 @@ jobs:
     steps:
       - name: Test
         id: test
-        run: echo ::set-output name=source_tag_lowercase::${{github.event.inputs.source-tag | tr '[:upper:]' '[:lower:]'}}
-      - name: Second Step
-        run: echo ${{steps.test.outputs.source_tag_lowercase}}
+        run: echo ${{github.event.inputs.source-tag,,}}
+
