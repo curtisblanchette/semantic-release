@@ -22,5 +22,8 @@ jobs:
     steps:
       - name: Test
         id: test
-        run: echo ${{github.event.inputs.source-tag,,}}
+        run: |
+          echo "SOURCE_TAG=${{github.event.inputs.source-tag}}" >>${GITHUB_ENV}
+          echo ${SOURCE_TAG,,}
+          
 
