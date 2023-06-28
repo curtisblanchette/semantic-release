@@ -20,10 +20,8 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
-      - name: Test
-        id: test
-        run: |
-          echo "SOURCE_TAG=${{github.event.inputs.source-tag}}" >>${GITHUB_ENV}
-          echo "${SOURCE_TAG,,}"
+      - id: toLowerCase
+        run: INPUT=${{github.event.inputs.source-tag}} echo "::set-output name=lowerCaseValue::${INPUT,,}"
+      - run: echo ${{steps.toLowerCase.outputs.lowerCaseValue}}
           
 
