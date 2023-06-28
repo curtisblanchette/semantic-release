@@ -23,7 +23,9 @@ jobs:
         run: |
           INPUT=${{github.event.inputs.source-tag}}
           INPUT=${INPUT,,}
-          echo 'value=${INPUT}' >> $GITHUB_OUTPUT
-      - run: echo "${{steps.toLowerCase.outputs.value}}"
+          echo "VALUE=${INPUT}' >> $GITHUB_OUTPUT
+
+      - name: output
+        run: echo "${{steps.toLowerCase.outputs.VALUE}}"
           
 
