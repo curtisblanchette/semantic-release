@@ -1,0 +1,28 @@
+name: Release
+run-name: Release ${{github.event.inputs.isDryRun == 'true' && 'Dry Run' || ''}}
+
+on:
+  workflow_dispatch:
+    inputs:
+      source-tag:
+        type: string
+        description: source tag
+
+env:
+  GH_TOKEN: ${{secrets.GH_TOKEN}}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - name: Test
+        id: test
+        run: |
+          echo ::set-output name=source_tag_lowercase::${{github.event.inputs.source-tag | tr '[:upper:]' '[:lower:]'}}
+      - name: Second Step
+        run: echo ${{steps.test.outputs.source_tag_lowercase}}
