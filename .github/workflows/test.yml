@@ -23,6 +23,7 @@ jobs:
       - id: toLowerCase
         run: |
           INPUT=${{github.event.inputs.source-tag}} 
-          echo ${INPUT,,}
+          INPUT=${INPUT,,}
+          echo ${INPUT}
           
 
