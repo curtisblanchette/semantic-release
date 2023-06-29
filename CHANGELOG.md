@@ -1,3 +1,10 @@
+## [1.4.7](https://github.com/curtisblanchette/semantic-release/compare/v1.4.6...v1.4.7) (2023-06-29)
+
+
+### Bug Fixes
+
+* add comment and remove unused permissions ([4142af9](https://github.com/curtisblanchette/semantic-release/commit/4142af9524ef229bb7ed09370fc804f98133a875))
+
 ## [1.4.6](https://github.com/curtisblanchette/semantic-release/compare/v1.4.5...v1.4.6) (2023-06-29)
 
 
