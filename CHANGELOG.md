@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/curtisblanchette/semantic-release/compare/v1.4.1...v1.4.2) (2023-06-29)
+
+
+### Bug Fixes
+
+* need the GH_TOKEN pat for rev-parse ([ee39198](https://github.com/curtisblanchette/semantic-release/commit/ee39198e10cb8fae7957b23150ac7f52cd417b11))
+
 ## [1.4.1](https://github.com/curtisblanchette/semantic-release/compare/v1.4.0...v1.4.1) (2023-06-29)
 
 
