@@ -38,6 +38,7 @@ jobs:
           
           git tag dev
           git push origin dev
+        shell: bash
 
       - name: Test
         run: |
