@@ -1,3 +1,10 @@
+## [1.4.8](https://github.com/curtisblanchette/semantic-release/compare/v1.4.7...v1.4.8) (2023-06-29)
+
+
+### Bug Fixes
+
+* define the shell type for our tag handler ([516b523](https://github.com/curtisblanchette/semantic-release/commit/516b5233a8600c84e86a35598bb4eb9d3b0d664e))
+
 ## [1.4.7](https://github.com/curtisblanchette/semantic-release/compare/v1.4.6...v1.4.7) (2023-06-29)
 
 
