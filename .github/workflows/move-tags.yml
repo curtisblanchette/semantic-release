@@ -1,4 +1,13 @@
-name: Move tags on new release
+# -----------------------------------------------------------------------------------------------
+# This workflow moves git tags to match with the latest releases and promotions (similar to ECR)
+# AWS Pipelines can only check out source code by a predefined tag/commit/branch/hash
+# -----------------------------------------------------------------------------------------------
+# Enables our promotion pipelines to check out the correct release commit
+#   in order to package and deploy the AWS CDK Lambdas
+#   using a code snapshot of the released version to each environment.
+# -----------------------------------------------------------------------------------------------
+
+name: Move DEV Tag on Release
 
 on:
   release:
@@ -10,13 +19,9 @@ env:
 jobs:
   tag:
     name: Tag
-    environment: dev_environment
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      issues: write
-      pull-requests: write
-      id-token: write
     steps:
       - uses: actions/checkout@v3
         with:
