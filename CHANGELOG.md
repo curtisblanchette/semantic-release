@@ -1,3 +1,11 @@
+## [1.4.9](https://github.com/curtisblanchette/semantic-release/compare/v1.4.8...v1.4.9) (2023-06-29)
+
+
+### Bug Fixes
+
+* fetch depth should be 0 to fetch ALL tags ([93b69af](https://github.com/curtisblanchette/semantic-release/commit/93b69afcad37254c85a8fba25fc4f1b2ecd30259))
+* remove token from checkout step ([1699d36](https://github.com/curtisblanchette/semantic-release/commit/1699d36cd65d90b6ef0f57dfe1caf7f3dec3512a))
+
 ## [1.4.8](https://github.com/curtisblanchette/semantic-release/compare/v1.4.7...v1.4.8) (2023-06-29)
 
 
