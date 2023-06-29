@@ -1,3 +1,17 @@
+## [1.3.1](https://github.com/curtisblanchette/semantic-release/compare/v1.3.0...v1.3.1) (2023-06-29)
+
+
+### Bug Fixes
+
+* add run-name with ternary on isDryRun flag ([ed98c64](https://github.com/curtisblanchette/semantic-release/commit/ed98c64f29f7bcdafa9027a85a1b9eb42272a81a))
+* address inline quotes ([60d2298](https://github.com/curtisblanchette/semantic-release/commit/60d2298ec6144ba04ce363da2030c8b0d8faabbf))
+* attempt to parse the nextVer for run-name ([f8aba47](https://github.com/curtisblanchette/semantic-release/commit/f8aba4784a37e70131330c6222310a9a1bed5a9a))
+* fix ternary on run-name ([cc2dc07](https://github.com/curtisblanchette/semantic-release/commit/cc2dc07a71189da200998a67098110289d0745f9))
+* install exec ([39ff6d5](https://github.com/curtisblanchette/semantic-release/commit/39ff6d5e8bed2e564d4ed4ad1720e32d22231a94))
+* output version to GITHUB_STEP_SUMMARY ([cdb5213](https://github.com/curtisblanchette/semantic-release/commit/cdb5213364e7b59a4b697915cc4a76e76778e1a4))
+* remove release dependencies from project, install in ci ([8f6107f](https://github.com/curtisblanchette/semantic-release/commit/8f6107f71d2d5759b7eceba620c29320befd1865))
+* second attempt to parse the nextVer for run-name ([51904ab](https://github.com/curtisblanchette/semantic-release/commit/51904abfeaaf7620fddc47ee81fc6173887295d3))
+
 # [1.3.0](https://github.com/curtisblanchette/semantic-release/compare/v1.2.0...v1.3.0) (2023-05-24)
 
 
