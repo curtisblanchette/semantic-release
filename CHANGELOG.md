@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/curtisblanchette/semantic-release/compare/v1.4.5...v1.4.6) (2023-06-29)
+
+
+### Bug Fixes
+
+* add permissions to the job ([84bfef9](https://github.com/curtisblanchette/semantic-release/commit/84bfef9c61750d257100d62ee6793b40ef2a742c))
+
 ## [1.4.5](https://github.com/curtisblanchette/semantic-release/compare/v1.4.4...v1.4.5) (2023-06-29)
 
 
