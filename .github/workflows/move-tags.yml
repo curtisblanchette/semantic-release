@@ -8,10 +8,15 @@ env:
   GITHUB_TOKEN: ${{github.token}}
 
 jobs:
-  build:
-    name: Build
+  tag:
+    name: Tag
     environment: dev_environment
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
     steps:
       - uses: actions/checkout@v3
         with:
