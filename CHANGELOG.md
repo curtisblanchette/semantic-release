@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/curtisblanchette/semantic-release/compare/v1.3.2...v1.4.0) (2023-06-29)
+
+
+### Features
+
+* remove the dev tag and re-apply it to this current commit ([daa6482](https://github.com/curtisblanchette/semantic-release/commit/daa6482cc19abcfb9f9425187d8015794cff6f2a))
+
 ## [1.3.2](https://github.com/curtisblanchette/semantic-release/compare/v1.3.1...v1.3.2) (2023-06-29)
 
 
