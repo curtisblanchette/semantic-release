@@ -4,6 +4,9 @@ on:
   release:
     types: [created]
 
+env:
+  GH_TOKEN: ${{secrets.GH_TOKEN}}
+
 jobs:
   build:
     name: Build
