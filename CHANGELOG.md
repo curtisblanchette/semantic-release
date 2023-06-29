@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/curtisblanchette/semantic-release/compare/v1.3.1...v1.3.2) (2023-06-29)
+
+
+### Bug Fixes
+
+* start wf on release created ([8904bee](https://github.com/curtisblanchette/semantic-release/commit/8904beeafc9aa813e5a40c7664cbaa3c1f1cf108))
+
 ## [1.3.1](https://github.com/curtisblanchette/semantic-release/compare/v1.3.0...v1.3.1) (2023-06-29)
 
 
