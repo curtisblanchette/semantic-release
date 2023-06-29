@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/curtisblanchette/semantic-release/compare/v1.4.4...v1.4.5) (2023-06-29)
+
+
+### Bug Fixes
+
+* add more fetch-depth and a token to checkout ([895bc00](https://github.com/curtisblanchette/semantic-release/commit/895bc003459e74aa20c3cc52d8914bf6ae7c6f87))
+
 ## [1.4.4](https://github.com/curtisblanchette/semantic-release/compare/v1.4.3...v1.4.4) (2023-06-29)
 
 
