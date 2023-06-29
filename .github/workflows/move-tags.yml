@@ -11,8 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set env
-        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Set dev tag
+        run: |
+          echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+          git tag -d dev
+          git push origin --delete dev
+          
+          git tag dev
+          git push origin dev
+
       - name: Test
         run: |
           echo $RELEASE_VERSION
