@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/curtisblanchette/semantic-release/compare/v1.4.2...v1.4.3) (2023-06-29)
+
+
+### Bug Fixes
+
+* use the correct environment variable name ([9267990](https://github.com/curtisblanchette/semantic-release/commit/9267990486c3d6e16dcc245e193c753dcd8f8ffc))
+
 ## [1.4.2](https://github.com/curtisblanchette/semantic-release/compare/v1.4.1...v1.4.2) (2023-06-29)
 
 
