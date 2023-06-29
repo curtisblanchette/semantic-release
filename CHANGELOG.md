@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/curtisblanchette/semantic-release/compare/v1.4.0...v1.4.1) (2023-06-29)
+
+
+### Bug Fixes
+
+* test for an existing tag before creating or deleting ([130c836](https://github.com/curtisblanchette/semantic-release/commit/130c83623ebbedf0495a51305133b12135ee8271))
+
 # [1.4.0](https://github.com/curtisblanchette/semantic-release/compare/v1.3.2...v1.4.0) (2023-06-29)
 
 
