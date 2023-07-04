@@ -1,3 +1,18 @@
+# [1.5.0](https://github.com/curtisblanchette/semantic-release/compare/v1.4.9...v1.5.0) (2023-07-04)
+
+
+### Bug Fixes
+
+* fix conditions checking for PROMOTED_TO variable ([4ce7c4c](https://github.com/curtisblanchette/semantic-release/commit/4ce7c4c9d9f704e0dd1ed054635653d6f34888ab))
+* logical flip ([a1e7662](https://github.com/curtisblanchette/semantic-release/commit/a1e7662d0f0fe8361801649a74a75be5affe9364))
+* put that replacement in a string ([b6f3026](https://github.com/curtisblanchette/semantic-release/commit/b6f302625498997c71ac8e3bccad2818ec076222))
+* try setting the env var from steps context ([a74a088](https://github.com/curtisblanchette/semantic-release/commit/a74a08847401601cea93b4107956306a1b0b0412))
+
+
+### Features
+
+* add promote script for testing ([85ad2a9](https://github.com/curtisblanchette/semantic-release/commit/85ad2a9077bccba3c7aff3509f756b6e3cc45689))
+
 ## [1.4.9](https://github.com/curtisblanchette/semantic-release/compare/v1.4.8...v1.4.9) (2023-06-29)
 
 
