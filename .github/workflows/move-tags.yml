@@ -31,6 +31,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
+            console.log("context", context.payload.workflow_run);
             let allArtifacts = await github.rest.actions.listWorkflowRunArtifacts({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -49,6 +50,7 @@ jobs:
             fs.writeFileSync(`${process.env.GITHUB_WORKSPACE}/promoted_to.zip`, Buffer.from(download.data)); 
 
       - name: Unzip Artifact
+        if: ${{ promoted_to.zip }}
         run: unzip promoted_to.zip
 
       - name: Set promoted_to
