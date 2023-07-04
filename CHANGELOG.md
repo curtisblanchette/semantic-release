@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/curtisblanchette/semantic-release/compare/v1.5.0...v1.5.1) (2023-07-04)
+
+
+### Bug Fixes
+
+* log context ([ce38adb](https://github.com/curtisblanchette/semantic-release/commit/ce38adb3bd4401984ad232be3bca0a76dbf3774a))
+
 # [1.5.0](https://github.com/curtisblanchette/semantic-release/compare/v1.4.9...v1.5.0) (2023-07-04)
 
 
