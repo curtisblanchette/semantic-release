@@ -68,12 +68,12 @@ jobs:
           script: |
             let fs = require('fs');
             let promoted_to = String(fs.readFileSync('./promoted_to'));
-            return promoted_to;
+            return promoted_to.trim();
           result-encoding: string
 
       - name: Move or Apply Tag
         run: |
-          PROMOTED_TO=$(echo "${{steps.set-result.outputs.result}}" | tr -d '\r')
+          PROMOTED_TO=${{steps.set-result.outputs.result}}
           
           if [[ -z "$PROMOTED_TO" ]]; then
             
