@@ -41,7 +41,7 @@ jobs:
              return artifact.name == "promoted_to"
             })[0];
             
-            return matchArtifact.id;
+            return matchArtifact?.id || false;
           result-encoding: string
 
 
