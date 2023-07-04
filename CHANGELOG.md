@@ -1,3 +1,10 @@
+## [1.5.10](https://github.com/curtisblanchette/semantic-release/compare/v1.5.9...v1.5.10) (2023-07-04)
+
+
+### Bug Fixes
+
+* strip the carriage return when assigning to var ([9766d48](https://github.com/curtisblanchette/semantic-release/commit/9766d48d6c0d62daf16cd40a70b6e59f166f43ee))
+
 ## [1.5.9](https://github.com/curtisblanchette/semantic-release/compare/v1.5.8...v1.5.9) (2023-07-04)
 
 
