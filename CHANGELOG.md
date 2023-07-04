@@ -1,3 +1,11 @@
+## [1.5.7](https://github.com/curtisblanchette/semantic-release/compare/v1.5.6...v1.5.7) (2023-07-04)
+
+
+### Bug Fixes
+
+* save a DEV artifact upon release success() ([6df9bc6](https://github.com/curtisblanchette/semantic-release/commit/6df9bc68e2a5788353c2e133d738f5a6f07c4141))
+* upload artifact upon release success() ([2896705](https://github.com/curtisblanchette/semantic-release/commit/2896705dbd264d2e1c9a868d7c2090c8aba002cb))
+
 ## [1.5.6](https://github.com/curtisblanchette/semantic-release/compare/v1.5.5...v1.5.6) (2023-07-04)
 
 
