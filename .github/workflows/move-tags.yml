@@ -66,7 +66,8 @@ jobs:
           PROMOTED_TO="${{steps.set-result.outputs.result}}"
           
           if [[ -z "$PROMOTED_TO" ]]; then
-          
+            echo "PROMOTED_TO is not set"      
+          else
             echo "Checking for an existing ${PROMOTED_TO} tag"
           
             if git rev-parse -q --verify "refs/tags/${PROMOTED_TO}" >/dev/null; then
@@ -78,9 +79,6 @@ jobs:
             echo "Applying the ${PROMOTED_TO} tag" 
             git tag ${PROMOTED_TO}
             git push origin ${PROMOTED_TO}
-          
-          else
-            echo "PROMOTED_TO is not set"
           fi
 
         shell: bash
