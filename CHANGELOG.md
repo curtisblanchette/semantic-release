@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/curtisblanchette/semantic-release/compare/v1.5.2...v1.5.3) (2023-07-04)
+
+
+### Bug Fixes
+
+* isolate "download artifact" and condition subsequent steps on result ([e3456f0](https://github.com/curtisblanchette/semantic-release/commit/e3456f0df45ecc46d9f2acc318f03f213510bb5e))
+
 ## [1.5.2](https://github.com/curtisblanchette/semantic-release/compare/v1.5.1...v1.5.2) (2023-07-04)
 
 
