@@ -47,7 +47,7 @@ jobs:
 
       - name: Download artifact
         uses: actions/github-script@v6
-        if: ${{ steps.is-promotion.outputs.result }}
+        if: ${{ steps.is-promotion.outputs.result != "false" }}
         with:
           script: |
             let download = await github.rest.actions.downloadArtifact({
@@ -60,11 +60,11 @@ jobs:
             fs.writeFileSync(`${process.env.GITHUB_WORKSPACE}/promoted_to.zip`, Buffer.from(download.data)); 
 
       - name: Unzip Artifact
-        if: ${{ steps.is-promotion.outputs.result }}
+        if: ${{ steps.is-promotion.outputs.result != "false" }}
         run: unzip promoted_to.zip
 
       - name: Set promoted_to
-        if: ${{ steps.is-promotion.outputs.result }}
+        if: ${{ steps.is-promotion.outputs.result != "false" }}
         id: set-result
         uses: actions/github-script@v6
         with:
