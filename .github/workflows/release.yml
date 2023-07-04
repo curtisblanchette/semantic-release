@@ -53,6 +53,7 @@ jobs:
           mkdir -p ./artifacts
           echo "DEV" > ./artifacts/promoted_to
       - uses: actions/upload-artifact@v3
+        if: ${{ success() }}
         with:
           name: promoted_to
           path: artifacts/
