@@ -1,3 +1,11 @@
+## [1.5.11](https://github.com/curtisblanchette/semantic-release/compare/v1.5.10...v1.5.11) (2023-07-04)
+
+
+### Bug Fixes
+
+* remove bad single quote ([d48d6ea](https://github.com/curtisblanchette/semantic-release/commit/d48d6eaee44ad6ab6cce4f5bdeeb204c40962f3f))
+* trim the variable before setting for tagging ([fe352f9](https://github.com/curtisblanchette/semantic-release/commit/fe352f93dbcaefd2e14b6b0dac115a965e41b4bf))
+
 ## [1.5.10](https://github.com/curtisblanchette/semantic-release/compare/v1.5.9...v1.5.10) (2023-07-04)
 
 
