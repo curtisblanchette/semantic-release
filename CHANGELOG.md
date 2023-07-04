@@ -1,3 +1,10 @@
+## [1.5.8](https://github.com/curtisblanchette/semantic-release/compare/v1.5.7...v1.5.8) (2023-07-04)
+
+
+### Bug Fixes
+
+* remove carriage returns from variable ([df28ae3](https://github.com/curtisblanchette/semantic-release/commit/df28ae37c525f1c9d4bea31cff097df83ac13edb))
+
 ## [1.5.7](https://github.com/curtisblanchette/semantic-release/compare/v1.5.6...v1.5.7) (2023-07-04)
 
 
