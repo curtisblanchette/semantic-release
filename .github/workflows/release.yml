@@ -46,14 +46,14 @@ jobs:
         shell: bash
 
       - name: Save Artifact
-        if: ${{ success() }}
+        if: success()
         env:
           PROMOTED_TO: ${{ github.event.inputs.destination-tag }}
         run: |
           mkdir -p ./artifacts
           echo "DEV" > ./artifacts/promoted_to
       - uses: actions/upload-artifact@v3
-        if: ${{ success() }}
+        if: success()
         with:
           name: promoted_to
           path: artifacts/

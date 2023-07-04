@@ -73,7 +73,7 @@ jobs:
 
       - name: Move or Apply Tag
         run: |
-          PROMOTED_TO="${{steps.set-result.outputs.result}}"
+          PROMOTED_TO="${{steps.set-result.outputs.result}}" | tr -d '\r'
           
           if [[ -z "$PROMOTED_TO" ]]; then
             
