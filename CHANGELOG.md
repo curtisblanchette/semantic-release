@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/curtisblanchette/semantic-release/compare/v1.5.3...v1.5.4) (2023-07-04)
+
+
+### Bug Fixes
+
+* return false when no artifact is found ([3226b5d](https://github.com/curtisblanchette/semantic-release/commit/3226b5dd745c524737de666a8ee3681a7d952175))
+
 ## [1.5.3](https://github.com/curtisblanchette/semantic-release/compare/v1.5.2...v1.5.3) (2023-07-04)
 
 
