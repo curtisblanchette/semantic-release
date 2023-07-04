@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/curtisblanchette/semantic-release/compare/v1.5.1...v1.5.2) (2023-07-04)
+
+
+### Bug Fixes
+
+* fix invalid workflow ([3148483](https://github.com/curtisblanchette/semantic-release/commit/31484833e098a12322e8c7be90b345e43aac87b2))
+
 ## [1.5.1](https://github.com/curtisblanchette/semantic-release/compare/v1.5.0...v1.5.1) (2023-07-04)
 
 
