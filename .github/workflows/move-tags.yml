@@ -62,9 +62,11 @@ jobs:
           result-encoding: string
 
       - name: Move Tag
-        env:
-          PROMOTED_TO: ${{ steps.set-result.outputs.result}}
+#        env:
+#          PROMOTED_TO: ${{ }}
         run: |
+          PROMOTED_TO=${{steps.set-result.outputs.result}}
+          
           if [[ -v $PROMOTED_TO ]]; then
           
             echo "Checking for an existing ${PROMOTED_TO} tag"
