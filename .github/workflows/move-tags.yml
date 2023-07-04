@@ -62,12 +62,10 @@ jobs:
           result-encoding: string
 
       - name: Move Tag
-#        env:
-#          PROMOTED_TO: ${{ }}
         run: |
           PROMOTED_TO=${{steps.set-result.outputs.result}}
           
-          if [[ -v $PROMOTED_TO ]]; then
+          if [[ -z "$PROMOTED_TO" ]]; then
           
             echo "Checking for an existing ${PROMOTED_TO} tag"
           
@@ -81,9 +79,7 @@ jobs:
             git tag ${PROMOTED_TO}
             git push origin ${PROMOTED_TO}
           
-          elif [[ -z $PROMOTED_TO ]]; then
-            echo "PROMOTED_TO is set to empty string"
-          else 
+          else
             echo "PROMOTED_TO is not set"
           fi
 
