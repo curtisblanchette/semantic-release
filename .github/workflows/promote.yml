@@ -1,0 +1,44 @@
+name: Promote TAG Workflow
+run-name: Promoting ${{github.event.inputs.source-tag}} to ${{github.event.inputs.destination-tag}}
+
+on:
+  workflow_dispatch:
+    inputs:
+      source-tag:
+        type: choice
+        description: Source Tag
+        options:
+          - DEV
+          - UAT
+          - TEST
+      destination-tag:
+        type: choice
+        description: Destination Tag
+        options:
+          - UAT
+          - TEST
+
+permissions:
+  id-token: write   # This is required for requesting the JWT
+  contents: read    # This is required for actions/checkout
+
+env:
+  AWS_DEFAULT_REGION: us-east-2
+
+jobs:
+  promote:
+    name: Promote Tag
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Save Artifact
+        env:
+          PROMOTED_TO: ${{ github.event.inputs.destination-tag }}
+        run: |
+          mkdir -p ./artifacts
+          echo $PROMOTED_TO > ./artifacts/promoted_to
+      - uses: actions/upload-artifact@v3
+        with:
+          name: promoted_to
+          path: artifacts/
+
