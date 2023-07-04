@@ -63,7 +63,7 @@ jobs:
 
       - name: Move Tag
         run: |
-          PROMOTED_TO=${{steps.set-result.outputs.result}}
+          PROMOTED_TO="${{steps.set-result.outputs.result}}"
           
           if [[ -z "$PROMOTED_TO" ]]; then
           
