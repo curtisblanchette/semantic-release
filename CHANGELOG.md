@@ -1,3 +1,10 @@
+## [1.5.6](https://github.com/curtisblanchette/semantic-release/compare/v1.5.5...v1.5.6) (2023-07-04)
+
+
+### Bug Fixes
+
+* check on encoded string "false" ([6051274](https://github.com/curtisblanchette/semantic-release/commit/605127431122117b2f1e8ac4c35bc91303a381c5))
+
 ## [1.5.5](https://github.com/curtisblanchette/semantic-release/compare/v1.5.4...v1.5.5) (2023-07-04)
 
 
