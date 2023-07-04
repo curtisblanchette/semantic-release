@@ -27,32 +27,44 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Download artifact
+      - name: Is Release or Promotion
         uses: actions/github-script@v6
+        id: is-promotion
         with:
           script: |
-            console.log("context", context.payload.workflow_run);
             let allArtifacts = await github.rest.actions.listWorkflowRunArtifacts({
               owner: context.repo.owner,
               repo: context.repo.repo,
               run_id: context.payload.workflow_run.id,
             });
             let matchArtifact = allArtifacts.data.artifacts.filter((artifact) => {
-              return artifact.name == "promoted_to"
+             return artifact.name == "promoted_to"
             })[0];
+            
+            return matchArtifact.id;
+          result-encoding: string
+
+
+      - name: Download artifact
+        uses: actions/github-script@v6
+        if: ${{ steps.is-promotion.outputs.result }}
+        with:
+          script: |
             let download = await github.rest.actions.downloadArtifact({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              artifact_id: matchArtifact.id,
+              artifact_id: ${{steps.is-promotion.outputs.result}},
               archive_format: 'zip'  
             });
             let fs = require('fs');
             fs.writeFileSync(`${process.env.GITHUB_WORKSPACE}/promoted_to.zip`, Buffer.from(download.data)); 
 
       - name: Unzip Artifact
+        if: ${{ steps.is-promotion.outputs.result }}
         run: unzip promoted_to.zip
 
       - name: Set promoted_to
+        if: ${{ steps.is-promotion.outputs.result }}
         id: set-result
         uses: actions/github-script@v6
         with:
@@ -62,12 +74,14 @@ jobs:
             return promoted_to;
           result-encoding: string
 
-      - name: Move Tag
+      - name: Move or Apply Tag
         run: |
           PROMOTED_TO="${{steps.set-result.outputs.result}}"
           
           if [[ -z "$PROMOTED_TO" ]]; then
-            echo "PROMOTED_TO is not set"      
+            echo "PROMOTED_TO is not set"
+            PROMOTED_TO="DEV"
+            
           else
             echo "Checking for an existing ${PROMOTED_TO} tag"
           
@@ -77,10 +91,11 @@ jobs:
               git push origin --delete ${PROMOTED_TO}
             fi
           
-            echo "Applying the ${PROMOTED_TO} tag" 
-            git tag ${PROMOTED_TO}
-            git push origin ${PROMOTED_TO}
           fi
+          
+          echo "Applying the ${PROMOTED_TO} tag" 
+          git tag ${PROMOTED_TO}
+          git push origin ${PROMOTED_TO}
 
         shell: bash
 
