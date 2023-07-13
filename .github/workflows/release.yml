@@ -46,7 +46,7 @@ jobs:
         shell: bash
 
       - name: Save Artifact
-        if: success()
+        if: success() && ${{github.event.inputs.isDryRun != "true" }}
         env:
           PROMOTED_TO: ${{ github.event.inputs.destination-tag }}
         run: |
