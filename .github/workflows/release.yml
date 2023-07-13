@@ -46,14 +46,14 @@ jobs:
         shell: bash
 
       - name: Save Artifact
-        if: success() && ${{ github.event.inputs.isDryRun == 'false' }}
+        if: success() && github.event.inputs.isDryRun == 'false'
         env:
           PROMOTED_TO: ${{ github.event.inputs.destination-tag }}
         run: |
           mkdir -p ./artifacts
           echo "DEV" > ./artifacts/promoted_to
       - uses: actions/upload-artifact@v3
-        if: success() && ${{ github.event.inputs.isDryRun == 'false' }}
+        if: success() && github.event.inputs.isDryRun == 'false'
         with:
           name: promoted_to
           path: artifacts/
