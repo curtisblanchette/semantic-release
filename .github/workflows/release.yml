@@ -53,7 +53,7 @@ jobs:
           mkdir -p ./artifacts
           echo "DEV" > ./artifacts/promoted_to
       - uses: actions/upload-artifact@v3
-        if: success()
+        if: success() && ${{ github.event.inputs.isDryRun == 'false' }}
         with:
           name: promoted_to
           path: artifacts/
