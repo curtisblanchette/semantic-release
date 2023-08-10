@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/curtisblanchette/semantic-release/compare/v1.6.0...v1.6.1) (2023-08-10)
+
+
+### Bug Fixes
+
+* add release assets ([50e0d08](https://github.com/curtisblanchette/semantic-release/commit/50e0d08d622210b8b3f63c1448e63203f8563171))
+
 ## [1.5.11](https://github.com/curtisblanchette/semantic-release/compare/v1.5.10...v1.5.11) (2023-07-04)
 
 
