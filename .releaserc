@@ -5,12 +5,14 @@
         "@semantic-release/release-notes-generator",
         "@semantic-release/changelog",
         "@semantic-release/npm",
-        "@semantic-release/git",
+            ["@semantic-release/git", {
+                "assets": ["services/**/package.json"]
+            }],
         "@semantic-release/github",
         [
             "@semantic-release/exec",
             {
-                "publishCmd": "echo \"NEXT_VERSION=${nextRelease.version}\" >> $GITHUB_STEP_SUMMARY"
+                "prepareCmd": "bash ./scripts/update-package-versions.sh ${nextRelease.version}"
             }
         ]
     ]
