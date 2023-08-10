@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/curtisblanchette/semantic-release/compare/v1.6.1...v1.6.2) (2023-08-10)
+
+
+### Bug Fixes
+
+* update plugin order ([9275897](https://github.com/curtisblanchette/semantic-release/commit/927589787ac1c32b5919885ac5c6c3886a435f74))
+
 ## [1.6.1](https://github.com/curtisblanchette/semantic-release/compare/v1.6.0...v1.6.1) (2023-08-10)
 
 
