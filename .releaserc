@@ -6,7 +6,7 @@
         "@semantic-release/changelog",
         "@semantic-release/npm",
             ["@semantic-release/git", {
-                "assets": ["services/**/package.json"]
+                "assets": ["CHANGELOG.md", "package.json", "package-lock.json", "services/**/package.json"]
             }],
         "@semantic-release/github",
         [
